@@ -1,0 +1,30 @@
+Node js:
+
+installation : 
+	https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+
+	add repositories 
+	sudo apt-get install nodejs
+	node -v
+
+Module 
+	send functions, class, var from a js file as object using module.exports = {} to another file and import using name = require('/path')
+
+Events and EventEmmiter
+	Events class is builtin in nodejs.
+	you need to import Events as EventEmmiter  .
+	listner can be added on EventEmmiter, a listener has a name and a function associated with it. The function is executed when the event is emmited
+
+ReadLine
+		'readline' is builtin module for input and output
+		a configuration/ interface is created to initialize input and output
+		question method takes input and the userinput can be accesed in callback
+		rl.close() is used to close input stream
+		event listner can be attached to readline events like('close','line') beacuse it is of type EventEmmiter
+		line event is when user enters input
+		setpromt() is used to set promt text
+		prompt() to show prompt
+
+		
+
+
