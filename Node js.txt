@@ -25,6 +25,102 @@ ReadLine
 		setpromt() is used to set promt text
 		prompt() to show prompt
 
+
+File system:
+	used to read and write files on system
+	builtin module named 'fs'
+	const fs = require('fs');
+	methods for file :
+			fs.writeFile(name,data,callback)
+			fs.readFile(name,callback)
+			fs.renameFile(name,newname,callback)
+			fs.appendFile(name,data,callback)
+			fs.unlink(name,callback)
 		
+	
+	methods for dir :
+			fs.mkdir(name,callback) gives error if already exists
+			fs.rmdir(name,callback) ,only deleted empty dir, gives error if not exists
+			fs.readdir(namen,(err,files)=>{})
+
+Streams: using fs
+	read or write the data using chunk
+	no need for all data ot be read to operate on chunk
+	efficient while working on large file
+	const readStream = fs.createReadStream(filepath)
+	const writeStream = fs.createWriteStream(filepath)
+	readStream.on('data',(chunk)=>{}){
+		writeStream.write(chunk);
+	}
+
+pipes:
+	conecting two Streams
+		    const readStream = fs.createReadStream('./example.txt');
+    		const writeStream = fs.createWriteStream('example2.txt');
+   			readStream.pipe(writeStream)    
+
+	connecting many Streams
+			const gzib = zlib.createGzip();
+			const readStream = fs.createReadStream('./example.txt');
+			const writeStream = fs.createWriteStream('compressed.txt.gz');
+			readStream.pipe(gzib).pipe(writeStream);
+
+
+http:
+	a http server can be created using 'http' module
+		const server = http.createServer((request,response)=>{
+
+		}
+	methods : 
+			http.createServer
+			http.listen(portNumber)
+			response.write("text")
+			response.writeHead()
+			response.end()
+
+package.json
+	contains meta data about project
+	command : npm init
+
+	to install a new package use npm install command : npm install/i  <packageName>
+	to uninstall : npm uninstall <packageName>
+
+	semantic version
+	major_version.minor_version.patch
+
+	symbols :
+	(^) carrot charachter : update to minor version (default)
+	(~) tilte : update to patch
+	no symbol : no updates
+
+express :
+	it is a web framework for node js
+	instal : npm install express
+	methods :
+		const app = express()// express() is a method
+		app.listen(portNumber)
+		app.get(url,(req,res)={
+			res.send()
+		}) for get request
+
+	route parameters 
+	localhost/example/parm1Val/parm2Val
+
+	app.get('url/:parm1,:parm2',(req,res)=>{
+		 console.log(req.params.parm1);
+	})
+
+	query par,
+	url : localhost/example?parm1=val1&parm2=val2;
+	to access : req.query
+
+
+
+
+
+
+
+
+
 
 

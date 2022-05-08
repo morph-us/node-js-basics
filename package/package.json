@@ -1,0 +1,17 @@
+{
+  "name": "node_tutorials",
+  "version": "1.0.0",
+  "description": "some basic codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "basics"
+  ],
+  "author": "morph-us",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
