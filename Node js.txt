@@ -114,6 +114,16 @@ express :
 	url : localhost/example?parm1=val1&parm2=val2;
 	to access : req.query
 
+a middleware can be used to hide folder names at our serverside
+	app.use('/public',express.static(path.join(__dirname,'static')));
+
+
+body-parser
+	npm install body-parser
+	nody-parser is a midlleware used to parse the body of post request
+
+
+
 
 
 
