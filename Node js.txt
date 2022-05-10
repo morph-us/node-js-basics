@@ -121,6 +121,28 @@ a middleware can be used to hide folder names at our serverside
 body-parser
 	npm install body-parser
 	nody-parser is a midlleware used to parse the body of post request
+		app.use(bodyparser.urlencoded({extended:false})); parses post data from request
+		app.use(bodyparser.json()); gets json data as java script array object
+	
+joi
+	npm install joi
+	used for data validation
+	syntax:
+		const schema = Joi.object().keys({})
+
+		const {err,val} = schema.validate(data)
+		if(err){
+
+		}
+		else{
+
+		}
+
+
+
+
+
+
 
 
 
