@@ -138,6 +138,31 @@ joi
 
 		}
 
+express templates
+	html files saved with .ejs extension
+	use : res.render('filename',{data : })
+
+	data of render object can be accesed in templates using 
+		<%= data.username %>
+		<% if (statmenet) { %>
+
+middleware 
+	executed between client and server get/post method
+	app.use(url,(req,res,next)={
+		//satements
+		next();
+	})		
+	next() must be executed at end of middleware
+
+route file
+	a seprate file can be created to manage all similar routes
+	const route = express.Router()
+	functions like route.use(), route.get(), route.post() can be used
+	route needs to be exported to main app file 
+	app.use('/url',route);
+
+
+
 
 
 

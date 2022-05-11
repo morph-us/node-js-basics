@@ -17,7 +17,15 @@ app.use(bodyparser.json());
 app.get('/',(req,res)=>{
     //res.send('Hello World');
 //    res.sendFile(path.join(__dirname,'static','login.html'));
-    res.render('index',{data: {userQuery:"hello "}});
+    let dict = {
+        data : {
+            title : "Search page",
+            result : ['node','express','react'],
+            loggedIn: false,
+            username: 'express'
+        }
+    }
+    res.render('index',dict);
 });
 
 app.post('/',(req,res)=>{

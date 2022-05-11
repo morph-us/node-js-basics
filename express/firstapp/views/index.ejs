@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home Page</title>
+        <title><%= data.title %></title>
         <link  rel="stylesheet" href="public/my.css">
     </head>
     <body>
         <h1>Hello people</h1>
-        <h3> <%= data.userQuery %> </h1>
+        <br>
+        <h2><%= data.title %></h2>
+        <% data.result.forEach(item=>{ %>
+            <li><%= item %></li>
+
+        <% }); %>
+
+        <% if(data.loggedIn){ %>
+            <h4><%= data.username %></h4>
+       <% }
+        else{ %>
+            <h4>not logged in</h4>
+        <%} %>
+        
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="Tree" width="500" height="600"> 
     </body>
 
